@@ -1,0 +1,276 @@
+@import 'base/_reset';
+@import 'utils/_variables';
+@import 'utils/_mixins';
+
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    font-weight: 600;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+header {
+    @include flex-right;
+    @include shadow;
+    height: 10%;
+    background-color: $primary-color;
+    padding-right: 5%;
+
+    .header_menu {
+        @include flex-center;
+        color: $text-color;
+    }
+}
+
+
+main {
+    @include flex-center;
+    flex-direction: column;
+
+    .home {
+        @include flex-left;
+        width: 100%;
+        height: 512px;
+        padding-left: 15%;
+
+        div {
+            @include flex-center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        h1 {
+            @include topic($font-size-home);
+        }
+
+        p {
+            color: $text-color-opacity;
+        }
+    }
+
+    .sobre-mim {
+        @include flex-center;
+        background-color: $secondary-color;
+        flex-direction: column;
+        width: 100%;
+        min-height: 512px;
+        gap: 25px;
+
+        h2 {
+            @include topic($font-size-topic);
+        }
+
+        p {
+            color: $text-color-opacity;
+            width: 50%;
+            text-align: center;
+        }
+    }
+
+    .habilidades {
+        @include flex-center;
+        flex-direction: column;
+        width: 100%;
+        height: 512px;
+
+        h2 {
+            @include topic($font-size-topic);
+        }
+
+        ul {
+            @include grid(6, 2, 35px);
+        }
+
+        li {
+            @include shadow;
+            background-color: $primary-color;
+            width: 100px;
+            height: 125px;
+            border: solid 5px $terciary-color;
+            border-radius: 10px;
+        }
+    }
+
+    .projetos {
+        @include flex-center;
+        background-color: $secondary-color;
+        flex-direction: column;
+        width: 100%;
+        min-height: 512px;
+        padding: 50px;
+
+        h2 {
+            @include topic($font-size-topic);
+        }
+
+        ul {
+            @include grid(3, 2, 35px);
+        }
+
+        li {
+            @include shadow;
+            background-color: $primary-color;
+            width: 450px;
+            height: 275px;
+            border: solid 5px $terciary-color;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+footer {
+    @include flex-center;
+    flex-direction: column;
+    padding: 50px;
+
+    h2 {
+        @include topic($font-size-topic);
+    }
+
+    ul {
+        @include flex-center;
+    }
+
+    li {
+        @include flex-center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    p {
+        color: $text-color-opacity;
+        font-size: 16px;
+    }
+
+    .social {
+        background-color: $primary-color;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+}
+
+
+/* Adição do código dos blobs animados */
+.lamp {
+    height: 100px;
+    width: 200px;
+    z-index: -1;
+}
+
+.lava {
+    filter: url("#goo");
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+.blob {
+    border-radius: 50%;
+    background: linear-gradient(to bottom, $terciary-color, $blob-color-bottom);
+    position: absolute;
+}
+
+.blob:nth-child(1) {
+    width: 180px;
+    height: 180px;
+    left: 20%;
+    bottom: -40%;
+    @include blob-animation(blob-one, 680%, 15s);
+}
+
+.blob:nth-child(2) {
+    width: 320px;
+    height: 320px;
+    right: 15%;
+    bottom: -55%;
+    @include blob-animation(blob-two, 450%, 13s);
+}
+
+.blob:nth-child(3) {
+    width: 140px;
+    height: 140px;
+    bottom: -30%;
+    right: 10%;
+    @include blob-animation(blob-three, 350%, 12s);
+}
+
+.blob:nth-child(4) {
+    width: 250px;
+    height: 250px;
+    bottom: -25%;
+    left: 30%;
+    @include blob-animation(blob-four, 620%, 10s);
+}
+
+.blob:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    bottom: -10%;
+    right: 40%;
+    @include blob-animation(blob-five, 690%, 9s);
+}
+
+.blob:nth-child(6) {
+    width: 50px;
+    height: 50px;
+    bottom: -7%;
+    left: 55%;
+    @include blob-animation(blob-six, 710%, 14s);
+}
+
+.blob:nth-child(7) {
+    width: 380px;
+    height: 380px;
+    bottom: -45%;
+    right: 60%;
+    @include blob-animation(blob-seven, 320%, 11s);
+}
+
+.blob:nth-child(8) {
+    width: 170px;
+    height: 170px;
+    bottom: -52%;
+    left: 25%;
+    @include blob-animation(blob-seven, 290%, 8s);
+}
+
+.blob:nth-child(9) {
+    width: 130px;
+    height: 130px;
+    bottom: -35%;
+    left: 60%;
+    @include blob-animation(blob-nine, 450%, 7s);
+}
+
+.blob:nth-child(10) {
+    width: 220px;
+    height: 220px;
+    bottom: -50%;
+    right: 25%;
+    @include blob-animation(blob-ten, 500%, 10s);
+}
+
+.blob:nth-child(11) {
+    width: 90px;
+    height: 90px;
+    bottom: -20%;
+    right: 70%;
+    @include blob-animation(blob-eleven, 600%, 9s);
+}
+
+.blob:nth-child(12) {
+    width: 275px;
+    height: 275px;
+    bottom: -55%;
+    left: 15%;
+    @include blob-animation(blob-twelve, 400%, 12s);
+}

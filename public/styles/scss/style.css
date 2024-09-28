@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/* _reset.scss */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes wobble {
+  50% {
+    border-radius: 42% 58% 70% 30%/45% 45% 55% 55%;
+  }
+  100% {
+    border-radius: 38% 52% 75% 36%/50% 40% 50% 60%;
+  }
+}
+@keyframes blob-one {
+  0%, 100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-700%);
+  }
+}
+@keyframes blob-two {
+  0%, 100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-420%);
+  }
+}
+@keyframes blob-three {
+  0%, 100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-305%);
+  }
+}
+@keyframes blob-four {
+  0%, 100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-605%);
+  }
+}
+@keyframes blob-five {
+  0%, 100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-700%);
+  }
+}
+@keyframes blob-six {
+  0%, 100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-700%);
+  }
+}
+@keyframes blob-seven {
+  0%, 100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-300%);
+  }
+}
+body {
+  background-color: #262626;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3215686275);
+  height: 10%;
+  background-color: #171717;
+  padding-right: 5%;
+}
+header .header_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+}
+main .home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 512px;
+  padding-left: 15%;
+}
+main .home div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  gap: 10px;
+}
+main .home h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  justify-self: flex-start;
+}
+main .home p {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+main .sobre-mim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #202020;
+  flex-direction: column;
+  width: 100%;
+  min-height: 512px;
+  gap: 25px;
+}
+main .sobre-mim h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  justify-self: flex-start;
+}
+main .sobre-mim p {
+  color: rgba(255, 255, 255, 0.5019607843);
+  width: 50%;
+  text-align: center;
+}
+main .habilidades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  width: 100%;
+  height: 512px;
+}
+main .habilidades h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  justify-self: flex-start;
+}
+main .habilidades ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 35px;
+}
+main .habilidades li {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3215686275);
+  background-color: #171717;
+  width: 100px;
+  height: 125px;
+  border: solid 5px #4D3FA6;
+  border-radius: 10px;
+}
+main .projetos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #202020;
+  flex-direction: column;
+  width: 100%;
+  min-height: 512px;
+  padding: 50px;
+}
+main .projetos h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  justify-self: flex-start;
+}
+main .projetos ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 35px;
+}
+main .projetos li {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3215686275);
+  background-color: #171717;
+  width: 450px;
+  height: 275px;
+  border: solid 5px #4D3FA6;
+  border-radius: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  padding: 50px;
+}
+footer h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  justify-self: flex-start;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+footer li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  gap: 15px;
+}
+footer p {
+  color: rgba(255, 255, 255, 0.5019607843);
+  font-size: 16px;
+}
+footer .social {
+  background-color: #171717;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+/* Adição do código dos blobs animados */
+.lamp {
+  height: 100px;
+  width: 200px;
+  z-index: -1;
+}
+
+.lava {
+  filter: url("#goo");
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.blob {
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #4D3FA6, #7d3fa6);
+  position: absolute;
+}
+
+.blob:nth-child(1) {
+  width: 180px;
+  height: 180px;
+  left: 20%;
+  bottom: -40%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-one ease-in-out 15s infinite;
+}
+
+.blob:nth-child(2) {
+  width: 320px;
+  height: 320px;
+  right: 15%;
+  bottom: -55%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-two ease-in-out 13s infinite;
+}
+
+.blob:nth-child(3) {
+  width: 140px;
+  height: 140px;
+  bottom: -30%;
+  right: 10%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-three ease-in-out 12s infinite;
+}
+
+.blob:nth-child(4) {
+  width: 250px;
+  height: 250px;
+  bottom: -25%;
+  left: 30%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-four ease-in-out 10s infinite;
+}
+
+.blob:nth-child(5) {
+  width: 70px;
+  height: 70px;
+  bottom: -10%;
+  right: 40%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-five ease-in-out 9s infinite;
+}
+
+.blob:nth-child(6) {
+  width: 50px;
+  height: 50px;
+  bottom: -7%;
+  left: 55%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-six ease-in-out 14s infinite;
+}
+
+.blob:nth-child(7) {
+  width: 380px;
+  height: 380px;
+  bottom: -45%;
+  right: 60%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-seven ease-in-out 11s infinite;
+}
+
+.blob:nth-child(8) {
+  width: 170px;
+  height: 170px;
+  bottom: -52%;
+  left: 25%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-seven ease-in-out 8s infinite;
+}
+
+.blob:nth-child(9) {
+  width: 130px;
+  height: 130px;
+  bottom: -35%;
+  left: 60%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-nine ease-in-out 7s infinite;
+}
+
+.blob:nth-child(10) {
+  width: 220px;
+  height: 220px;
+  bottom: -50%;
+  right: 25%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-ten ease-in-out 10s infinite;
+}
+
+.blob:nth-child(11) {
+  width: 90px;
+  height: 90px;
+  bottom: -20%;
+  right: 70%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-eleven ease-in-out 9s infinite;
+}
+
+.blob:nth-child(12) {
+  width: 275px;
+  height: 275px;
+  bottom: -55%;
+  left: 15%;
+  animation: wobble 4s ease-in-out alternate infinite, blob-twelve ease-in-out 12s infinite;
+}
+
+/*# sourceMappingURL=style.css.map */

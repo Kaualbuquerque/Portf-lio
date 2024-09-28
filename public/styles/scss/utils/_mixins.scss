@@ -1,0 +1,137 @@
+@mixin flex-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+@mixin flex-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin shadow {
+    box-shadow: 0px 2px 5px #00000052;
+}
+
+@mixin topic($font-size) {
+    font-size: $font-size;
+    font-weight: 700;
+    justify-self: flex-start;
+}
+
+@mixin grid($collum, $row, $gap) {
+    display: grid;
+    grid-template-columns: repeat($collum, 1fr);
+    grid-template-rows: repeat($row, auto);
+    gap: $gap;
+}
+
+
+
+@mixin blob-animation($keyframe-name, $y-move, $duration) {
+    animation: wobble 4s ease-in-out alternate infinite,
+    #{$keyframe-name} ease-in-out $duration infinite;
+}
+
+
+@keyframes wobble {
+    50% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    }
+
+    100% {
+        border-radius: 38% 52% 75% 36% / 50% 40% 50% 60%;
+    }
+}
+
+@keyframes blob-one {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-700%);
+    }
+}
+
+@keyframes blob-two {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-420%);
+    }
+}
+
+@keyframes blob-three {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-305%);
+    }
+}
+
+@keyframes blob-four {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-605%);
+    }
+}
+
+@keyframes blob-five {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-700%);
+    }
+}
+
+@keyframes blob-six {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-700%);
+    }
+}
+
+@keyframes blob-seven {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-300%);
+    }
+}
