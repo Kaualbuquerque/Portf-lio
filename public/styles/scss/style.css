@@ -130,9 +130,12 @@ header {
   justify-content: flex-end;
   align-items: center;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3215686275);
+  position: fixed;
   height: 10%;
+  width: 100%;
+  position: fixed;
   background-color: #171717;
-  padding-right: 5%;
+  z-index: 1;
 }
 header .header_menu {
   display: flex;
@@ -140,6 +143,11 @@ header .header_menu {
   align-items: center;
   gap: 50px;
   color: #fff;
+  position: relative;
+  padding-right: 5%;
+}
+header li {
+  cursor: pointer;
 }
 
 main {
@@ -216,11 +224,22 @@ main .habilidades ul {
 }
 main .habilidades li {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3215686275);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  border: solid 5px #4D3FA6;
+  transition: transform 0.5s;
   background-color: #171717;
   width: 100px;
   height: 125px;
-  border: solid 5px #4D3FA6;
+  border: solid 5px #202020;
   border-radius: 10px;
+}
+main .habilidades li:hover {
+  border: solid 5px #4D3FA6;
+  transition: transform 0.5s;
+  transform: translateY(-10px);
 }
 main .projetos {
   display: flex;
@@ -246,11 +265,18 @@ main .projetos ul {
 }
 main .projetos li {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3215686275);
+  border: solid 5px #4D3FA6;
+  transition: transform 0.5s;
   background-color: #171717;
   width: 450px;
   height: 275px;
-  border: solid 5px #4D3FA6;
+  border: solid 5px #262626;
   border-radius: 10px;
+}
+main .projetos li:hover {
+  border: solid 5px #4D3FA6;
+  transition: transform 0.5s;
+  transform: translateY(-10px);
 }
 
 footer {
@@ -285,10 +311,22 @@ footer p {
   font-size: 16px;
 }
 footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
   background-color: #171717;
   width: 100px;
   height: 100px;
+  border: solid 5px #171717;
   border-radius: 100%;
+}
+footer .social:hover {
+  border: solid 5px #4D3FA6;
+  transition: transform 0.5s;
+}
+footer .social img {
+  width: 50%;
 }
 
 /* Adição do código dos blobs animados */
@@ -325,7 +363,7 @@ footer .social {
   width: 320px;
   height: 320px;
   right: 15%;
-  bottom: -55%;
+  bottom: -40%;
   animation: wobble 4s ease-in-out alternate infinite, blob-two ease-in-out 13s infinite;
 }
 
@@ -364,7 +402,7 @@ footer .social {
 .blob:nth-child(7) {
   width: 380px;
   height: 380px;
-  bottom: -45%;
+  bottom: -40%;
   right: 60%;
   animation: wobble 4s ease-in-out alternate infinite, blob-seven ease-in-out 11s infinite;
 }
@@ -372,7 +410,7 @@ footer .social {
 .blob:nth-child(8) {
   width: 170px;
   height: 170px;
-  bottom: -52%;
+  bottom: -40%;
   left: 25%;
   animation: wobble 4s ease-in-out alternate infinite, blob-seven ease-in-out 8s infinite;
 }
@@ -388,7 +426,7 @@ footer .social {
 .blob:nth-child(10) {
   width: 220px;
   height: 220px;
-  bottom: -50%;
+  bottom: -40%;
   right: 25%;
   animation: wobble 4s ease-in-out alternate infinite, blob-ten ease-in-out 10s infinite;
 }
@@ -404,7 +442,7 @@ footer .social {
 .blob:nth-child(12) {
   width: 275px;
   height: 275px;
-  bottom: -55%;
+  bottom: -35%;
   left: 15%;
   animation: wobble 4s ease-in-out alternate infinite, blob-twelve ease-in-out 12s infinite;
 }

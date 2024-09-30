@@ -17,15 +17,25 @@ body {
 header {
     @include flex-right;
     @include shadow;
+    position: fixed;
     height: 10%;
+    width: 100%;
+    position: fixed;
     background-color: $primary-color;
-    padding-right: 5%;
+    z-index: 1;
 
     .header_menu {
         @include flex-center;
         color: $text-color;
+        position: relative; 
+        padding-right: 5%;
+    }
+
+    li {
+        cursor: pointer;
     }
 }
+
 
 
 main {
@@ -88,12 +98,20 @@ main {
 
         li {
             @include shadow;
+            @include flex-center;
+            @include border;
             background-color: $primary-color;
             width: 100px;
             height: 125px;
-            border: solid 5px $terciary-color;
+            border: solid 5px $secondary-color;
             border-radius: 10px;
+
+            &:hover {
+                @include border;
+                transform: translateY(-10px)
+            }
         }
+
     }
 
     .projetos {
@@ -114,11 +132,17 @@ main {
 
         li {
             @include shadow;
+            @include border;
             background-color: $primary-color;
             width: 450px;
             height: 275px;
-            border: solid 5px $terciary-color;
+            border: solid 5px $background-color;
             border-radius: 10px;
+
+            &:hover {
+                @include border;
+                transform: translateY(-10px)
+            }
         }
     }
 }
@@ -149,11 +173,23 @@ footer {
     }
 
     .social {
+        @include flex-center;
         background-color: $primary-color;
         width: 100px;
         height: 100px;
+        border: solid 5px $primary-color;
         border-radius: 100%;
+
+        &:hover {
+            @include border;
+        }
+
+        img {
+            width: 50%;
+        }
     }
+
+
 }
 
 
@@ -191,7 +227,7 @@ footer {
     width: 320px;
     height: 320px;
     right: 15%;
-    bottom: -55%;
+    bottom: -40%;
     @include blob-animation(blob-two, 450%, 13s);
 }
 
@@ -230,7 +266,7 @@ footer {
 .blob:nth-child(7) {
     width: 380px;
     height: 380px;
-    bottom: -45%;
+    bottom: -40%;
     right: 60%;
     @include blob-animation(blob-seven, 320%, 11s);
 }
@@ -238,7 +274,7 @@ footer {
 .blob:nth-child(8) {
     width: 170px;
     height: 170px;
-    bottom: -52%;
+    bottom: -40%;
     left: 25%;
     @include blob-animation(blob-seven, 290%, 8s);
 }
@@ -254,7 +290,7 @@ footer {
 .blob:nth-child(10) {
     width: 220px;
     height: 220px;
-    bottom: -50%;
+    bottom: -40%;
     right: 25%;
     @include blob-animation(blob-ten, 500%, 10s);
 }
@@ -270,7 +306,7 @@ footer {
 .blob:nth-child(12) {
     width: 275px;
     height: 275px;
-    bottom: -55%;
+    bottom: -35%;
     left: 15%;
     @include blob-animation(blob-twelve, 400%, 12s);
 }

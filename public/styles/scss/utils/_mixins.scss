@@ -34,13 +34,18 @@
     gap: $gap;
 }
 
+@mixin border{
+    border: solid 5px $terciary-color;
+    transition: transform 0.5s;
+}
+
+
 
 
 @mixin blob-animation($keyframe-name, $y-move, $duration) {
     animation: wobble 4s ease-in-out alternate infinite,
     #{$keyframe-name} ease-in-out $duration infinite;
 }
-
 
 @keyframes wobble {
     50% {
